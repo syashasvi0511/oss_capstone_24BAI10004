@@ -39,7 +39,3 @@ Python is a widely used open-source programming language known for its simplicit
 - Shell Scripting (Bash)
 - Git & GitHub
 
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-  
