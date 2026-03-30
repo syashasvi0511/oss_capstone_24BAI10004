@@ -1,0 +1,35 @@
+#!/bin/bash
+# Script 2: FOSS Package Inspector
+# Author: Yashasvi Sharma
+
+PACKAGE="python3"
+
+# --- Check if package is installed ---
+if dpkg -l | grep -qw "$PACKAGE"; then
+    echo "$PACKAGE is installed."
+
+    echo "Version info:"
+    dpkg -l "$PACKAGE" | grep "$PACKAGE"
+
+else
+    echo "$PACKAGE is NOT installed."
+fi
+
+# --- Case statement ---
+case $PACKAGE in
+    python3)
+        echo "Python3: a powerful open-source programming language."
+        ;;
+    firefox)
+        echo "Firefox: a free and open-source web browser."
+        ;;
+    vlc)
+        echo "VLC: an open-source multimedia player."
+        ;;
+    apache2)
+        echo "Apache: the web server that built the open internet."
+        ;;
+    *)
+        echo "No description available."
+        ;;
+esac
